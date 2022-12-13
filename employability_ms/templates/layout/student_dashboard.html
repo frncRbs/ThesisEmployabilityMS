@@ -1,0 +1,25 @@
+
+{% extends 'layout/base.html' %}
+{% block content %}
+    <div class="header">
+        <div><img style="width: 100px; height: auto; z-index: 1" src="https://i.ibb.co/hVNnnCf/312968052-2476337182505210-5876316929227327673-n.png" alt="312968052-2476337182505210-5876316929227327673-n" border="0"></div>
+        <div class="logo">
+            {% block content_header %}
+                {% block content_header_end %}
+                
+                {% endblock %}
+            {% endblock %}
+        </div>
+        <div class="nav">
+            <a href="/logout">
+                <h2  style="cursor: pointer; color: white; -webkit-text-stroke: .1px black;"><i class="fa fa-sign-out"></i>
+                    <span>{{ auth_user.first_name }}</span>
+                    Sign out
+                </h2>
+            </a>
+            <a href="/CSinputs_" style="display: inline-block;"><h2  style="cursor: pointer; color: white; -webkit-text-stroke: .1px black;"><i class="fas fa-bullseye"></i> Start Predictions</h2></a>
+        </div>
+    </div>
+    {% block student_dashboard %}
+    {% endblock %}
+{% endblock %}

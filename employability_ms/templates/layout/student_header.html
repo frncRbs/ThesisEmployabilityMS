@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<main>
+    <div class="header">
+        <div><img style="width: 100px; height: auto; z-index: 1" src="https://i.ibb.co/hVNnnCf/312968052-2476337182505210-5876316929227327673-n.png" alt="312968052-2476337182505210-5876316929227327673-n" border="0"></div>
+        <div class="logo">
+            {% block content_header %}
+                {% block content_header_end %}
+                
+                {% endblock %}
+            {% endblock %}
+        </div>
+        <div class="nav">
+            <a href="/"><h2  style="cursor: pointer; color: white; -webkit-text-stroke: .1px black; display: inline-block"><i class="fas fa-home"></i> Home</h2></a>
+            <a href="/logout"><h2 style="cursor: pointer; color: white; -webkit-text-stroke: .1px black; display: inline-block"><i class="fa fa-sign-out"></i> Logout</h2></a>
+        </div>
+    </div>
+    {% block student_details %}
+    {% endblock %}
+{% endblock %}
